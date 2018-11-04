@@ -1,20 +1,14 @@
 import React, { Component } from 'react';
-import { Router, Link } from '@reach/router';
-import 'bulma/css/bulma.min.css';
-
-const Tasks = () => (
-    <div>
-        <h1>Tasks</h1>
-
-
-    </div>
-);
+import { Router } from '@reach/router';
+import Tasks from './Tasks'
+import AddTask from './AddTask'
 
 class App extends Component {
     render() {
         return (
             <Router>
-                <Tasks path="/tasks" />
+                <Tasks path="/" />
+                <AddTask path="/tasks/create" />
             </Router>
         );
     }
